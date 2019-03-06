@@ -52,14 +52,10 @@ int main(int argc, char** argv){
     ip = program;
 
     //printf("%s", program);
-    
-    // loop through every character in the file
-    int c = 0;
 
     // while we haven't hit the end of the program
     while(ip < program + programSize){
-        c = *ip;
-        switch(c){
+        switch(*ip){
             // move pointer right
             case '>':
                 // if p is going to run off tape to the right
@@ -121,7 +117,7 @@ int main(int argc, char** argv){
             
             // decrememnt current value
             case '-':
-                (*p)++;
+                (*p)--;
                 break;
 
             // otherwise, ignore char
