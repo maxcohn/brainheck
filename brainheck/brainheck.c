@@ -22,7 +22,7 @@ long read_program(char *infile, char **program){
     fseek(fp, 0L, SEEK_SET);	
 
     // allocate memory for program to be read in
-    *program = malloc(fileSize);	
+    *program = calloc(fileSize, sizeof(char));	
 
     // if there way a memory error, quit
     if(*program == NULL)
@@ -48,7 +48,7 @@ int main(int argc, char** argv){
     int *p = tape;
 
     // read the file
-    int programSize = read_program(argv[1], &program);
+    long programSize = read_program(argv[1], &program);
     ip = program;
 
     //printf("%s", program);
@@ -121,6 +121,8 @@ int main(int argc, char** argv){
                 break;
 
             // otherwise, ignore char
+            default:
+                break;
         }
 
         // move to next character of program
@@ -131,3 +133,4 @@ int main(int argc, char** argv){
     free(program);
 
 }
+
