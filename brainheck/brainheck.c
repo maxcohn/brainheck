@@ -120,6 +120,29 @@ int main(int argc, char** argv){
                 (*p)--;
                 break;
 
+            // print numeric value of current space
+            case ':':
+                printf("%d", *p);
+                break;
+
+            // read number into current space
+            case ';':
+                scanf("%d", p); // read number directly into p. is this bad?
+                //TODO add error checking??
+                break;
+            
+            // comment
+            case '#':
+                // loop until we hit another #
+                while(*(++ip) != '#'){
+                    // if our input program pointer goes out of the program,
+                    // and the main loop will end
+                    if(ip >= program + programSize)
+                        break;
+                }
+
+                break;
+
             // otherwise, ignore char
             default:
                 break;
