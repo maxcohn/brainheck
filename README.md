@@ -15,11 +15,9 @@ brainheck acts as a superset of brainf*ck with the goal of adding more useful co
 
 ## But why?
 
-When I first looking into brainf*ck, I was amazed, and this led me down the rabbit hole that is esoteric programming languages.
+When I was first looking into brainf*ck, I was amazed, and this led me down the rabbit hole that is esoteric programming languages.
 
 I figured a great way to get my feet wet in this world would be making a super set of brainf*ck.
-
-
 
 ### Resources
 
